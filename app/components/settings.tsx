@@ -490,7 +490,7 @@ function SyncItems() {
 
   return (
     <>
-      <List>
+      {/* <List>
         <ListItem
           title={Locale.Settings.Sync.CloudState}
           subTitle={
@@ -548,7 +548,7 @@ function SyncItems() {
             />
           </div>
         </ListItem>
-      </List>
+      </List> */}
 
       {showSyncConfigModal && (
         <SyncConfigModal onClose={() => setShowSyncConfigModal(false)} />
@@ -635,7 +635,8 @@ export function Settings() {
         navigate(Path.Home);
       }
     };
-    if (clientConfig?.isApp) { // Force to set custom endpoint to true if it's app
+    if (clientConfig?.isApp) {
+      // Force to set custom endpoint to true if it's app
       accessStore.update((state) => {
         state.useCustomConfig = true;
       });
