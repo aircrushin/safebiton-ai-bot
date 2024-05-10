@@ -342,7 +342,8 @@ const cn = {
   },
   Store: {
     DefaultTopic: "新的聊天",
-    BotHello: "您好，我是索飞AI助手，有什么可以帮您的吗？",
+    BotHello:
+      "您好，我是索飞AI助手，我可以帮您解答关于安全生产管理与智能协作平台的问题。",
     Error: "出错了，稍后重试吧",
     Prompt: {
       History: (content: string) => "这是历史聊天总结作为前情提要：" + content,

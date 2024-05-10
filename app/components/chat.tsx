@@ -169,7 +169,7 @@ function PromptToast(props: {
 
   return (
     <div className={styles["prompt-toast"]} key="prompt-toast">
-      {/* {props.showToast && (
+      {props.showToast && (
         <div
           className={styles["prompt-toast-inner"] + " clickable"}
           role="button"
@@ -183,7 +183,7 @@ function PromptToast(props: {
       )}
       {props.showModal && (
         <SessionConfigModel onClose={() => props.setShowModal(false)} />
-      )} */}
+      )}
     </div>
   );
 }
@@ -491,13 +491,13 @@ export function ChatActions(props: {
         }
       />
 
-      {/* <ChatAction
+      <ChatAction
         onClick={props.showPromptHints}
         text={Locale.Chat.InputActions.Prompt}
         icon={<PromptIcon />}
       />
 
-      <ChatAction
+      {/* <ChatAction
         onClick={() => {
           navigate(Path.Masks);
         }}
@@ -597,14 +597,14 @@ export function EditMessageModal(props: { onClose: () => void }) {
             ></input>
           </ListItem>
         </List>
-        {/* <ContextPrompts
+        <ContextPrompts
           context={messages}
           updateContext={(updater) => {
             const newMessages = messages.slice();
             updater(newMessages);
             setMessages(newMessages);
           }}
-        /> */}
+        />
       </Modal>
     </div>
   );

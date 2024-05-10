@@ -11,9 +11,10 @@ import { ensure } from "../utils/clone";
 
 let fetchState = 0; // 0 not fetch, 1 fetching, 2 done
 
-const DEFAULT_OPENAI_URL =
-  getClientConfig()?.buildMode === "export" ? DEFAULT_API_HOST : ApiPath.OpenAI;
+// const DEFAULT_OPENAI_URL =
+//   getClientConfig()?.buildMode === "export" ? DEFAULT_API_HOST : ApiPath.OpenAI;
 
+const DEFAULT_OPENAI_URL = "http://1.95.6.5:9092/";
 const DEFAULT_ACCESS_STATE = {
   accessCode: "",
   useCustomConfig: false,
@@ -22,7 +23,8 @@ const DEFAULT_ACCESS_STATE = {
 
   // openai
   openaiUrl: DEFAULT_OPENAI_URL,
-  openaiApiKey: "",
+  openaiApiKey:
+    "pat_BYAN3UTjLd6075hEjYiN3e2tGZxcelbETnITxESMIWJb0xQg36uW7qSnhnFEcWiA",
 
   // azure
   azureUrl: "",
