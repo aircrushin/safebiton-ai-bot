@@ -15,6 +15,8 @@ let fetchState = 0; // 0 not fetch, 1 fetching, 2 done
 //   getClientConfig()?.buildMode === "export" ? DEFAULT_API_HOST : ApiPath.OpenAI;
 
 const DEFAULT_OPENAI_URL = "http://1.95.6.5:9092/";
+const DEFAULT_API_KEY =
+  "pat_BYAN3UTjLd6075hEjYiN3e2tGZxcelbETnITxESMIWJb0xQg36uW7qSnhnFEcWiA";
 const DEFAULT_ACCESS_STATE = {
   accessCode: "",
   useCustomConfig: false,
@@ -23,12 +25,11 @@ const DEFAULT_ACCESS_STATE = {
 
   // openai
   openaiUrl: DEFAULT_OPENAI_URL,
-  openaiApiKey:
-    "pat_BYAN3UTjLd6075hEjYiN3e2tGZxcelbETnITxESMIWJb0xQg36uW7qSnhnFEcWiA",
+  openaiApiKey: DEFAULT_API_KEY,
 
   // azure
-  azureUrl: "",
-  azureApiKey: "",
+  azureUrl: DEFAULT_OPENAI_URL,
+  azureApiKey: DEFAULT_API_KEY,
   azureApiVersion: "2023-08-01-preview",
 
   // server config
