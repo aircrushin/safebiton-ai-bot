@@ -70,6 +70,7 @@ export const getServerSideConfig = () => {
   const apiKey = apiKeys[randomIndex];
   console.log(
     process.env.OPENAI_API_KEY,
+    process.env.BASE_URL,
     `[Server Config] using ${randomIndex + 1} of ${apiKeys.length} api key`,
   );
 
