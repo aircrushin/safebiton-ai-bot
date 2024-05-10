@@ -62,15 +62,12 @@ export const getServerSideConfig = () => {
 
   const isAzure = !!process.env.AZURE_URL;
 
-  const apiKeyEnvVar =
-    process.env.OPENAI_API_KEY ??
-    "pat_BYAN3UTjLd6075hEjYiN3e2tGZxcelbETnITxESMIWJb0xQg36uW7qSnhnFEcWiA";
+  const apiKeyEnvVar = process.env.OPENAI_API_KEY ?? "";
   const apiKeys = apiKeyEnvVar.split(",").map((v) => v.trim());
   const randomIndex = Math.floor(Math.random() * apiKeys.length);
   const apiKey = apiKeys[randomIndex];
   console.log(
     process.env.OPENAI_API_KEY,
-    process.env.BASE_URL,
     `[Server Config] using ${randomIndex + 1} of ${apiKeys.length} api key`,
   );
 
