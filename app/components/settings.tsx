@@ -827,7 +827,7 @@ export function Settings() {
 
         <SyncItems />
 
-        {/* <List>
+        <List>
           <ListItem
             title={Locale.Settings.Mask.Splash.Title}
             subTitle={Locale.Settings.Mask.Splash.SubTitle}
@@ -1104,9 +1104,9 @@ export function Settings() {
               }
             ></input>
           </ListItem>
-        </List> */}
+        </List>
 
-        {/* <List>
+        <List>
           <ModelConfigList
             modelConfig={config.modelConfig}
             updateConfig={(updater) => {
@@ -1115,7 +1115,7 @@ export function Settings() {
               config.update((config) => (config.modelConfig = modelConfig));
             }}
           />
-        </List> */}
+        </List>
 
         {shouldShowPromptModal && (
           <UserPromptModal onClose={() => setShowPromptModal(false)} />
