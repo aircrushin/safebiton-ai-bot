@@ -14,7 +14,7 @@ let fetchState = 0; // 0 not fetch, 1 fetching, 2 done
 // const DEFAULT_OPENAI_URL =
 //   getClientConfig()?.buildMode === "export" ? DEFAULT_API_HOST : ApiPath.OpenAI;
 
-const DEFAULT_OPENAI_URL = "http://1.95.6.5:9092/";
+const DEFAULT_OPENAI_URL = "https://www.safebition.com/ai/";
 const DEFAULT_API_KEY =
   "pat_BYAN3UTjLd6075hEjYiN3e2tGZxcelbETnITxESMIWJb0xQg36uW7qSnhnFEcWiA";
 const DEFAULT_ACCESS_STATE = {
