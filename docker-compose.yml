@@ -1,9 +1,9 @@
 version: "3.9"
 services:
-  chatgpt-next-web:
+  safebiton-ai-web:
     profiles: ["no-proxy"]
-    container_name: chatgpt-next-web
-    image: yidadaa/chatgpt-next-web
+    container_name: safebiton-ai-web
+    image: safebition/safebiton-ai-web
     ports:
       - 3000:3000
     environment:
@@ -17,10 +17,10 @@ services:
       - DISABLE_FAST_LINK=$DISABLE_FAST_LINK
       - OPENAI_SB=$OPENAI_SB
 
-  chatgpt-next-web-proxy:
+  safebiton-ai-web-proxy:
     profiles: ["proxy"]
-    container_name: chatgpt-next-web-proxy
-    image: yidadaa/chatgpt-next-web
+    container_name: safebiton-ai-web-proxy
+    image: safebition/safebiton-ai-web-proxy
     ports:
       - 3000:3000
     environment:
