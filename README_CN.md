@@ -1,21 +1,4 @@
-<div align="center">
-<img src="./docs/images/icon.svg" alt="预览"/>
-
-<h1 align="center">ChatGPT Next Web</h1>
-
-一键免费部署你的私人 ChatGPT 网页应用。
-
-[演示 Demo](https://chat-gpt-next-web.vercel.app/) / [反馈 Issues](https://github.com/Yidadaa/ChatGPT-Next-Web/issues) / [加入 Discord](https://discord.gg/zrhvHCr79N) / [QQ 群](https://user-images.githubusercontent.com/16968934/228190818-7dd00845-e9b9-4363-97e5-44c507ac76da.jpeg) / [打赏开发者](https://user-images.githubusercontent.com/16968934/227772541-5bcd52d8-61b7-488c-a203-0330d8006e2b.jpg) / [Donate](#捐赠-donate-usdt)
-
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2FYidadaa%2FChatGPT-Next-Web&env=OPENAI_API_KEY&env=CODE&project-name=chatgpt-next-web&repository-name=ChatGPT-Next-Web)
-
-[![Deploy on Zeabur](https://zeabur.com/button.svg)](https://zeabur.com/templates/ZBUEFA)
-
-[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/Yidadaa/ChatGPT-Next-Web)
-
-![主界面](./docs/images/cover.png)
-
-</div>
+# safebition-ai-bot 
 
 ## 开始使用
 
@@ -129,19 +112,6 @@ Azure Api 版本，你可以在这里找到：[Azure 文档](https://learn.micro
 
 用来控制模型列表，使用 `+` 增加一个模型，使用 `-` 来隐藏一个模型，使用 `模型名=展示名` 来自定义模型的展示名，用英文逗号隔开。
 
-## 开发
-
-点击下方按钮，开始二次开发：
-
-[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/Yidadaa/ChatGPT-Next-Web)
-
-在开始写代码之前，需要在项目根目录新建一个 `.env.local` 文件，里面填入环境变量：
-
-```
-OPENAI_API_KEY=<your api key here>
-
-# 中国大陆用户，可以使用本项目自带的代理进行开发，你也可以自由选择其他代理地址
-BASE_URL=https://b.nextweb.fun/api/proxy
 ```
 
 ### 本地开发
@@ -151,6 +121,12 @@ BASE_URL=https://b.nextweb.fun/api/proxy
 3. 如果你想本地部署，请使用 `yarn install && yarn build && yarn start` 命令，你可以配合 pm2 来守护进程，防止被杀死，详情询问 ChatGPT。
 
 ## 部署
+
+### 本地部署
+
+`yarn build && yarn start`
+
+注意，其中并不包含public 目录和.next/static 目录内的静态文件，因为Next.js默认我们会用CDN来提供这些文件。下面我们会额外配置nginx，让nginx来提供这些文件，但您也可以直接将public 目录拷贝到.next/standalone目录中、将.next/static 目录拷贝到.next/standalone/.next 目录中，这样将对应文件的请求发送到SSR服务器后，服务器可以直接提供这些文件，当然性能肯定不如使用nginx。
 
 ### 容器部署 （推荐）
 
