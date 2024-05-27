@@ -69,11 +69,11 @@ export const getServerSideConfig = () => {
   const randomIndex = Math.floor(Math.random() * apiKeys.length);
   const apiKey = apiKeys[randomIndex];
   console.log(
-    "current api key is: ",
+    " key:",
     process.env.OPENAI_API_KEY,
-    "current fetch url is: ",
+    "\n",
+    "url:",
     process.env.BASE_URL,
-    `[Server Config] using ${randomIndex + 1} of ${apiKeys.length} api key`,
   );
 
   return {

@@ -25,13 +25,7 @@ export function ModelConfigList(props: {
             );
           }}
         >
-          {allModels
-            .filter((v) => v.available)
-            .map((v, i) => (
-              <option value={v.name} key={i}>
-                {v.displayName}
-              </option>
-            ))}
+          <option value="safebition ai">safebition ai</option>
         </Select>
       </ListItem>
       <ListItem
