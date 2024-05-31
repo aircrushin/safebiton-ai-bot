@@ -16,7 +16,7 @@ let fetchState = 0; // 0 not fetch, 1 fetching, 2 done
 
 const DEFAULT_OPENAI_URL = "https://coze2openai-2cwm.onrender.com/";
 const DEFAULT_API_KEY =
-  "pat_BYAN3UTjLd6075hEjYiN3e2tGZxcelbETnITxESMIWJb0xQg36uW7qSnhnFEcWiA";
+  "pat_mTV7dLnRIf50whO6Oq9FykknyR3cm4OjtssPfze6Fnj3kxN5NWCM1NHmvrVLXJTy";
 const DEFAULT_ACCESS_STATE = {
   accessCode: "",
   useCustomConfig: false,

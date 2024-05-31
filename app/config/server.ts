@@ -64,7 +64,7 @@ export const getServerSideConfig = () => {
 
   const apiKeyEnvVar =
     process.env.OPENAI_API_KEY ??
-    "pat_BYAN3UTjLd6075hEjYiN3e2tGZxcelbETnITxESMIWJb0xQg36uW7qSnhnFEcWiA";
+    "pat_mTV7dLnRIf50whO6Oq9FykknyR3cm4OjtssPfze6Fnj3kxN5NWCM1NHmvrVLXJTy";
   const apiKeys = apiKeyEnvVar.split(",").map((v) => v.trim());
   const randomIndex = Math.floor(Math.random() * apiKeys.length);
   const apiKey = apiKeys[randomIndex];
